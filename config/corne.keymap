@@ -61,6 +61,26 @@
             bindings = <&euro_sign>;
             key-positions = <10 22>;
         };
+
+        open_brace_sign {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <18 30>;
+        };
+
+        close_brace_sign {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <19 31>;
+        };
+
+        open_brakets_sign {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <20 32>;
+        };
+
+        close_brakets_sign {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <21 33>;
+        };
     };
 
     macros {
@@ -74,28 +94,28 @@
         declare_var_go: declare_var_go {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp EQUAL>;
+            bindings = <&kp COLON &kp EQUAL &kp SPACE>;
             label = "DECLARE_VAR_GO";
         };
 
         save_on_vim: save_on_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp W>;
+            bindings = <&kp COLON &kp W &kp ENTER>;
             label = "SAVE_ON_VIM";
         };
 
         save_and_quit_vim: save_and_quit_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp W &kp Q>;
+            bindings = <&kp COLON &kp W &kp Q &kp ENTER>;
             label = "SAVE_AND_QUIT_VIM";
         };
 
         force_quit_vim: force_quit_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp Q &kp EXCLAMATION>;
+            bindings = <&kp COLON &kp Q &kp EXCLAMATION &kp ENTER>;
             label = "FORCE_QUIT_VIM";
         };
 
@@ -130,7 +150,7 @@
         euro_sign: euro_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp NUMBER_4>;
+            bindings = <&kp RALT &kp NUMBER_4>;
             label = "EURO_SIGN";
         };
     };
