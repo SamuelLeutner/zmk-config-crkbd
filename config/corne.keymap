@@ -78,13 +78,6 @@
             label = "DECLARE_VAR_GO";
         };
 
-        euro_sign: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp NUMBER_4>;
-            label = "NEW_MACRO";
-        };
-
         save_on_vim: save_on_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -133,6 +126,13 @@
             bindings = <&kp LC(K)>;
             label = "TOP_PANE";
         };
+
+        euro_sign: euro_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp NUMBER_4>;
+            label = "EURO_SIGN";
+        };
     };
 
     behaviors {
@@ -140,14 +140,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER1_LAYER3";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&to 3>;
+            bindings = <&mo 1>, <&mo 3>;
         };
 
         layer2_layer4: layer2_layer4 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER2_LAYER4";
             #binding-cells = <0>;
-            bindings = <&to 2>, <&to 4>;
+            bindings = <&mo 2>, <&mo 4>;
         };
     };
 
