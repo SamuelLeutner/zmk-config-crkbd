@@ -57,8 +57,8 @@
             key-positions = <9 21>;
         };
 
-        euro_sign {
-            bindings = <&euro_sign>;
+        question_sign {
+            bindings = <&kp QUESTION>;
             key-positions = <10 22>;
         };
 
