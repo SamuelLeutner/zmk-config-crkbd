@@ -136,14 +136,18 @@
     };
 
     behaviors {
-        layer_behavior: layer_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_BEHAVIOR";
-            bindings = <&mo>, <&mo>;
+        layer1_layer3: layer1_layer3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER1_LAYER3";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&to 3>;
+        };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <1000>;
-            hold-trigger-key-positions = <37 40>;
+        layer2_layer4: layer2_layer4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER2_LAYER4";
+            #binding-cells = <0>;
+            bindings = <&to 2>, <&to 4>;
         };
     };
 
@@ -158,10 +162,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R                &kp T        &kp Y    &kp U                &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F                &kp G        &kp H    &kp J                &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V                &kp B        &kp N    &kp M                &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &layer_behavior 2 1  &kp SPACE    &kp RET  &layer_behavior 4 3  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R           &kp T        &kp Y    &kp U           &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F           &kp G        &kp H    &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V           &kp B        &kp N    &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &layer1_layer3  &kp SPACE    &kp RET  &layer2_layer4  &kp RALT
             >;
         };
 
@@ -197,10 +201,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &kp LC(T)  &kp LC(W)          &kp LC(A)          &kp LC(C)        &kp LC(V)  &kp LC(X)  &trans  &trans  &trans
-&trans  &trans  &trans  &kp SLASH  &retangular_print  &kp PRINTSCREEN    &declare_var_go  &kp PLUS   &kp MINUS  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans             &trans             &trans           &trans     &trans     &trans  &trans  &trans
-                        &trans     &trans             &trans             &trans           &trans     &trans
+&trans  &trans  &trans  &kp LC(T)  &kp LC(W)  &kp LC(A)          &kp LC(C)        &kp LC(V)  &kp LC(X)  &trans  &trans  &trans
+&trans  &trans  &trans  &kp SLASH  &trans     &kp PRINTSCREEN    &declare_var_go  &kp PLUS   &kp MINUS  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans             &trans           &trans     &trans     &trans  &trans  &trans
+                        &trans     &trans     &trans             &trans           &trans     &trans
             >;
         };
 
