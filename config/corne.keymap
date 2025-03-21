@@ -102,21 +102,21 @@
         save_on_vim: save_on_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp W &kp ENTER>;
+            bindings = <&kp ESC &kp COLON &kp W &kp ENTER>;
             label = "SAVE_ON_VIM";
         };
 
         save_and_quit_vim: save_and_quit_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp W &kp Q &kp ENTER>;
+            bindings = <&kp ESC &kp COLON &kp W &kp SPACE &kp EXCL &kp S &kp U &kp D &kp O &kp SPACE &kp T &kp E &kp E &kp SPACE &kp PRCNT &kp ENTER>;
             label = "SAVE_AND_QUIT_VIM";
         };
 
         force_quit_vim: force_quit_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp Q &kp EXCLAMATION &kp ENTER>;
+            bindings = <&kp ESC &kp COLON &kp Q &kp EXCLAMATION &kp ENTER>;
             label = "FORCE_QUIT_VIM";
         };
 
@@ -155,11 +155,11 @@
             label = "EURO_SIGN";
         };
 
-        new_macro: new_macro {
+        save_if_sudo_vim: save_if_sudo_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "NEW_MACRO";
+            bindings = <&kp ESC &kp COLON &kp W &kp Q &kp ENTER>;
+            label = "SAVE_IF_SUDO_VIM";
         };
     };
 
@@ -247,10 +247,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans              &trans        &trans             &trans      &trans        &trans     &trans       &trans  &trans
-&trans  &trans  &trans  &save_and_quit_vim  &save_on_vim  &force_quit_vim    &left_pane  &bottom_pane  &top_pane  &right_pane  &trans  &trans
-&trans  &trans  &trans  &trans              &trans        &trans             &trans      &trans        &trans     &trans       &trans  &trans
-                        &trans              &trans        &trans             &trans      &trans        &trans
+&trans  &trans  &trans             &trans              &trans        &trans             &trans      &trans        &trans     &trans       &trans  &trans
+&trans  &trans  &save_if_sudo_vim  &save_and_quit_vim  &save_on_vim  &force_quit_vim    &left_pane  &bottom_pane  &top_pane  &right_pane  &trans  &trans
+&trans  &trans  &trans             &trans              &trans        &trans             &trans      &trans        &trans     &trans       &trans  &trans
+                                   &trans              &trans        &trans             &trans      &trans        &trans
             >;
         };
     };
