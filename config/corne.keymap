@@ -161,6 +161,13 @@
             bindings = <&kp ESC &kp COLON &kp W &kp Q &kp ENTER>;
             label = "SAVE_IF_SUDO_VIM";
         };
+
+        go_error_handling: go_error_handling {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp RBKT &kp RET &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE &kp N &kp I &kp L &kp COMMA &kp SPACE &kp E &kp R &kp R &kp RET &kp RBRC>;
+            label = "GO_ERROR_HANDLING";
+        };
     };
 
     behaviors {
@@ -249,10 +256,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans             &trans              &trans        &trans             &trans      &trans        &trans     &trans       &trans  &trans
-&trans  &trans  &save_if_sudo_vim  &save_and_quit_vim  &save_on_vim  &force_quit_vim    &left_pane  &bottom_pane  &top_pane  &right_pane  &trans  &trans
-&trans  &trans  &trans             &trans              &trans        &trans             &trans      &trans        &trans     &trans       &trans  &trans
-                                   &trans              &trans        &trans             &trans      &trans        &trans
+&trans  &trans  &trans             &trans              &trans        &trans             &trans           &trans              &trans     &trans       &trans  &trans
+&trans  &trans  &save_if_sudo_vim  &save_and_quit_vim  &save_on_vim  &force_quit_vim    &left_pane       &bottom_pane        &top_pane  &right_pane  &trans  &trans
+&trans  &trans  &trans             &trans              &trans        &trans             &declare_var_go  &go_error_handling  &trans     &trans       &trans  &trans
+                                   &trans              &trans        &trans             &trans           &trans              &trans
             >;
         };
     };
