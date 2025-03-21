@@ -187,7 +187,8 @@
             tapping-term-ms = <200>;
             retro-tap;
             hold-while-undecided;
-            flavor = "balanced";
+            flavor = "tap-preferred";
+            hold-while-undecided-linger;
         };
     };
 
