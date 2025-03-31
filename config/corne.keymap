@@ -187,7 +187,7 @@
 
         hml_behavior: hml_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "homewrow_mods_left";
+            label = "hml_behavior";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -198,7 +198,7 @@
 
         hmr_behavior: hmr_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "homewrow_mods_right";
+            label = "hmr_behavior";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
